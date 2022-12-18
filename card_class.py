@@ -17,3 +17,15 @@ values = {
     'Ace':14,
 }
 
+class Card:
+
+    def __init__(self, suit, rank):
+        self.suit = suit
+        self.rank = rank
+        self.value = values[rank]
+
+    def __str__(self):
+        return self.rank + " of " + self.suit
+
+three_of_clubs = Card("Clubs", 'Three')
+print(three_of_clubs)
